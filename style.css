@@ -1,0 +1,265 @@
+/* --- Global --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0c0c0c;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* --- Header --- */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(15, 15, 15, 0.9);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #00bfff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+  font-weight: 400;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+}
+
+/* --- Hero Section --- */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #111 0%, #000 100%);
+  text-align: center;
+  flex-direction: column;
+}
+
+.content {
+  animation: fadeInUp 1.2s ease;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 25px rgba(0,191,255,0.4);
+  animation: glow 2s infinite alternate;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: 28px;
+}
+
+h1 span {
+  color: #00bfff;
+}
+
+.role {
+  color: #bbb;
+  font-size: 16px;
+  margin: 8px 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #00bfff;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0099cc;
+  box-shadow: 0 0 15px #00bfff;
+  transform: translateY(-3px);
+}
+
+/* --- About Section --- */
+.about {
+  padding: 100px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.about h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* --- Skills Section --- */
+.skills {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.skills h2, .contact-info h2, .education h2, .hobbies h2 {
+  color: #00bfff;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1b1b1b;
+  padding: 15px;
+  border-radius: 12px;
+  width: 100px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00bfff;
+}
+
+.skills h3 {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+/* --- Contact Info --- */
+.contact-info {
+  padding: 80px 20px;
+  text-align: center;
+  background: #0c0c0c;
+}
+
+.contact-details p {
+  color: #ccc;
+  margin: 8px 0;
+}
+
+.contact-details a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.contact-details img {
+  vertical-align: middle;
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.contact-details img:hover {
+  transform: scale(1.2);
+}
+
+/* --- Education & Hobbies --- */
+.education, .hobbies {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.education p, .hobbies p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #111;
+  color: #777;
+  font-size: 14px;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(0,191,255,0.4);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(0,191,255,0.9);
+  }
+}
